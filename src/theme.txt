@@ -1,0 +1,41 @@
+#  GRUB theme
+#
+# Written by The Kraven Daemon (kravendaemon)
+# Repository: https://github.com/---------
+# Refs: http://wiki.rosalab.ru/en/index.php/Grub2_theme_tutorial
+##############################################################
+# Global options format => elem-option: "param"
+
+#desktop-color: "#000000"
+desktop-image: "background.png"
+title-text: "GRUB2LANDS"
+title-color: "#000101"
+title-font: "Compacta Bold 48"
+
+terminal-font: "Compacta Bold 24"
+terminal-left: "20%"
+terminal-top: "33%"
+terminal-width: "60%"
+terminal-height: "40%"
+terminal-box: "menu_bkg_*.png"
+
+#message-font: ""
+message-color: "#fffff5"
+message-bg-color: "#032100"
+
+# component
++ boot_menu {
+        left = 50%-400
+        top = 50%-200
+        width = 800
+        height = 400
+        item_color = "#EEEEEE"
+        #item_font = "Compacta Bold 24"
+        selected_item_font = "Compacta Bold 24"
+        selected_item_color = "#00EE00"
+        menu_pixmap_style = "boot_menu_*.png"
+        selected_item_pixmap_style = "select_*.png"
+        scrollbar = true
+        scrollbar_width = 10
+        scrollbar_thumb = "slider_*.png"
+}
