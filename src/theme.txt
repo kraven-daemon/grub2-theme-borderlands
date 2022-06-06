@@ -3,39 +3,97 @@
 # Written by The Kraven Daemon (kravendaemon)
 # Repository: https://github.com/---------
 # Refs: http://wiki.rosalab.ru/en/index.php/Grub2_theme_tutorial
+# more accurate: info grub > theme section
 ##############################################################
 # Global options format => elem-option: "param"
 
-#desktop-color: "#000000"
 desktop-image: "background.png"
-title-text: "GRUB2LANDS"
-title-color: "#000101"
-title-font: "Compacta Bold 48"
+desktop-image-scale-method: "crop"
+desktop-image-h-align: "left"
+desktop-image-v-align: "top"
 
-terminal-font: "Compacta Bold 24"
-terminal-left: "20%"
-terminal-top: "33%"
-terminal-width: "60%"
-terminal-height: "40%"
-terminal-box: "menu_bkg_*.png"
+title-text: ""
 
-#message-font: ""
-message-color: "#fffff5"
-message-bg-color: "#032100"
+terminal-font: "Cousine Regular 16"
+# terminal-box: "terminal_*.png"
+terminal-border: "4"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "90%"
+
+# BOOT_MENU
+# item_font
+# selected_item_font
+# item_color
+# selected_item_color
+# icon_width
+# icon_height
+# item_height
+# item_padding
+# item_icon_space
+# item_spacing
+# menu_pixmap_style
+# item_pixmap_style
+# selected_item_pixmap_style
+# scrollbar
+# scrollbar_frame
+# scrollbar_thumb
+# scrollbar_thumb_overlay
+# scrollbar_slice
+# scrollbar_left_pad
+# scrollbar_right_pad
+# scrollbar_top_pad
+# scrollbar_bottom_pad
+# visible
 
 # component
 + boot_menu {
-        left = 50%-400
-        top = 50%-200
-        width = 800
-        height = 400
-        item_color = "#EEEEEE"
-        #item_font = "Compacta Bold 24"
-        selected_item_font = "Compacta Bold 24"
-        selected_item_color = "#00EE00"
-        menu_pixmap_style = "boot_menu_*.png"
-        selected_item_pixmap_style = "select_*.png"
-        scrollbar = true
-        scrollbar_width = 10
-        scrollbar_thumb = "slider_*.png"
+        left=10%
+        top=40%
+        width=80%
+        height=60%
+        menu_pixmap_style="menu_*.png"
+        icon_width=24
+        icon_height=24
+        item_font="Cousine Regular 16"
+        item_color="#EEEEEE"
+        #item_pixmap_style=""
+        item_height=20
+        item_padding=0
+        item_spacing=0
+        item_icon_space=26
+        selected_item_font="Cousine Regular 18"
+        selected_item_color="#00EE00"
+        #selected_item_pixmap_style=""
+        scrollbar=true
+        scrollbar_width=5%
+}
+
++ vbox {
+        top = 0
+        left = 0
+        width = 100%
+        height = 30%
+        + label {
+                text="GRUBBERLANDS"
+                color="yellow"
+                font="Compacta Bold 48"
+        }
+        + label {
+                text = "@KEYMAP_SHORT@"
+                font = "Cousine Bold 16"
+                color = "#EEEEEE"
+        }
+}
++ progress_bar {
+    id = "__timeout__"
+    left = 19%
+    top = 87%
+    width = 45%
+    height = 5%
+    show_text = false
+    fg_color = "#3BB3FB"
+    bg_color = "#2C2C2C"
+    border_color = "#FFFFFF"
 }
